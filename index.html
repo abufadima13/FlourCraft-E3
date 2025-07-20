@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,59 @@
     }
     .menu-item {
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+      border-radius: 5px;
+      object-fit: cover;
     }
     .contact {
       background-color: #fef4e7;
       padding: 15px;
       margin-top: 30px;
       border-radius: 10px;
+    }
+    .order-form-container {
+      background-color: #fef4e7;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+    .order-form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .order-form-container input[type="text"],
+    .order-form-container input[type="date"],
+    .order-form-container input[type="time"],
+    .order-form-container textarea,
+    .order-form-container select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .order-form-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .order-form-container button {
+      background-color: #f89c1c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .order-form-container button:hover {
+      background-color: #e08b1a;
     }
     footer {
       text-align: center;
@@ -45,25 +93,350 @@
   <header>
     <h1>FlourCraft E3</h1>
     <p>Bringing sweet smiles to every celebration</p>
-  </header>  <div class="content">
+  </header>
+  <div class="content">
     <h2>About Us</h2>
-    <p>FlourCraft E3 is a cafe that serves coffee, tea, soft drinks, and delicious snacks mostly made from flour. We are professionals at serving snacks as starters at all kinds of events — weddings, birthdays, or graduation ceremonies.</p><h2>Our Menu</h2>
-<div class="menu-item">- Samosa</div>
-<div class="menu-item">- Spring Rolls</div>
-<div class="menu-item">- Meat Pie</div>
-<div class="menu-item">- Chicken Cutlets</div>
-<div class="menu-item">- Shish Kebab</div>
-<div class="menu-item">- Shish Tawok</div>
-<div class="menu-item">- And many more...</div>
+    <p>FlourCraft E3 is a cafe that serves coffee, tea, soft drinks, and delicious snacks mostly made from flour. We are professionals at serving snacks as starters at all kinds of events — weddings, birthdays, or graduation ceremonies.</p>
 
-<div class="contact">
-  <h2>Contact Us</h2>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348094459168">08094459168</a></p>
-  <p><strong>Call:</strong> 08134105585</p>
-</div>
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Samosa" alt="Samosa">
+      <span>Samosa</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Spring+Rolls" alt="Spring Rolls">
+      <span>Spring Rolls</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Meat+Pie" alt="Meat Pie">
+      <span>Meat Pie</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Chicken+Cutlets" alt="Chicken Cutlets">
+      <span>Chicken Cutlets</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Shish+Kebab" alt="Shish Kebab">
+      <span>Shish Kebab</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Shish+Tawok" alt="Shish Tawok">
+      <span>Shish Tawok</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=More" alt="More items">
+      <span>And many more...</span>
+    </div>
 
-  </div>  <footer>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348094459168">08094459168</a></p>
+      <p><strong>Call:</strong> 08134105585</p>
+    </div>
+
+    ---
+
+    <div class="order-form-container">
+      <h2>Place Your Order</h2>
+      <form id="orderForm">
+        <label for="snacks">Snack Selection (Select all that apply):</label>
+        <div>
+          <input type="checkbox" id="samosa" name="snacks" value="Samosa">
+          <label for="samosa">Samosa</label><br>
+          <input type="checkbox" id="springRolls" name="snacks" value="Spring Rolls">
+          <label for="springRolls">Spring Rolls</label><br>
+          <input type="checkbox" id="meatPie" name="snacks" value="Meat Pie">
+          <label for="meatPie">Meat Pie</label><br>
+          <input type="checkbox" id="chickenCutlets" name="snacks" value="Chicken Cutlets">
+          <label for="chickenCutlets">Chicken Cutlets</label><br>
+          <input type="checkbox" id="shishKebab" name="snacks" value="Shish Kebab">
+          <label for="shishKebab">Shish Kebab</label><br>
+          <input type="checkbox" id="shishTawok" name="snacks" value="Shish Tawok">
+          <label for="shishTawok">Shish Tawok</label><br>
+          <input type="checkbox" id="otherSnacks" name="snacks" value="Other">
+          <label for="otherSnacks">Other (please specify below)</label>
+        </div>
+        <textarea id="otherSnackDetails" placeholder="Specify other snacks or quantities here (e.g., 50 Samosas, 30 Spring Rolls)" rows="3" style="margin-top: 10px;"></textarea>
+
+        <label for="deliveryAddress">Delivery Address:</label>
+        <textarea id="deliveryAddress" placeholder="Your full delivery address" rows="3" required></textarea>
+
+        <label for="preferredDate">Preferred Delivery Date:</label>
+        <input type="date" id="preferredDate" required>
+
+        <label for="preferredTime">Preferred Delivery Time:</label>
+        <input type="time" id="preferredTime" required>
+
+        <button type="submit">Send Order via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
     &copy; 2025 FlourCraft E3. All rights reserved.
   </footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const whatsappNumber = '2348094459168'; // Your WhatsApp number
+
+      // Get selected snacks
+      const selectedSnacks = Array.from(document.querySelectorAll('input[name="snacks"]:checked'))
+                                  .map(checkbox => checkbox.value);
+      let snackList = selectedSnacks.join(', ');
+      const otherSnackDetails = document.getElementById('otherSnackDetails').value.trim();
+      if (otherSnackDetails) {
+        if (snackList) {
+          snackList += `, Other: ${otherSnackDetails}`;
+        } else {
+          snackList = `Other: ${otherSnackDetails}`;
+        }
+      }
+
+      const deliveryAddress = document.getElementById('deliveryAddress').value;
+      const preferredDate = document.getElementById('preferredDate').value;
+      const preferredTime = document.getElementById('preferredTime').value;
+
+      // Construct the WhatsApp message
+      const message = `Hello FlourCraft E3, I'd like to place an order:%0A%0A` +
+                      `*Snacks:* ${snackList || 'No snacks selected'}.%0A` +
+                      `*Delivery Address:* ${deliveryAddress}%0A` +
+                      `*Preferred Date:* ${preferredDate}%0A` +
+                      `*Preferred Time:* ${preferredTime}%0A%0A` +
+                      `Looking forward to my delicious order!`;
+
+      // Encode the message for a URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // Create the WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlourCraft E3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #f89c1c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+    }
+    h2 {
+      color: #f89c1c;
+    }
+    .menu-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    .contact {
+      background-color: #fef4e7;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+    .order-form-container {
+      background-color: #fef4e7;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+    .order-form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .order-form-container input[type="text"],
+    .order-form-container input[type="date"],
+    .order-form-container input[type="time"],
+    .order-form-container textarea,
+    .order-form-container select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .order-form-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .order-form-container button {
+      background-color: #f89c1c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .order-form-container button:hover {
+      background-color: #e08b1a;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #f89c1c;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FlourCraft E3</h1>
+    <p>Bringing sweet smiles to every celebration</p>
+  </header>
+  <div class="content">
+    <h2>About Us</h2>
+    <p>FlourCraft E3 is a cafe that serves coffee, tea, soft drinks, and delicious snacks mostly made from flour. We are professionals at serving snacks as starters at all kinds of events — weddings, birthdays, or graduation ceremonies.</p>
+
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Samosa" alt="Samosa">
+      <span>Samosa</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Spring+Rolls" alt="Spring Rolls">
+      <span>Spring Rolls</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Meat+Pie" alt="Meat Pie">
+      <span>Meat Pie</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Chicken+Cutlets" alt="Chicken Cutlets">
+      <span>Chicken Cutlets</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Shish+Kebab" alt="Shish Kebab">
+      <span>Shish Kebab</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=Shish+Tawok" alt="Shish Tawok">
+      <span>Shish Tawok</span>
+    </div>
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/80/FFA500/FFFFFF?text=More" alt="More items">
+      <span>And many more...</span>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348094459168">08094459168</a></p>
+      <p><strong>Call:</strong> 08134105585</p>
+    </div>
+
+    ---
+
+    <div class="order-form-container">
+      <h2>Place Your Order</h2>
+      <form id="orderForm">
+        <label for="snacks">Snack Selection (Select all that apply):</label>
+        <div>
+          <input type="checkbox" id="samosa" name="snacks" value="Samosa">
+          <label for="samosa">Samosa</label><br>
+          <input type="checkbox" id="springRolls" name="snacks" value="Spring Rolls">
+          <label for="springRolls">Spring Rolls</label><br>
+          <input type="checkbox" id="meatPie" name="snacks" value="Meat Pie">
+          <label for="meatPie">Meat Pie</label><br>
+          <input type="checkbox" id="chickenCutlets" name="snacks" value="Chicken Cutlets">
+          <label for="chickenCutlets">Chicken Cutlets</label><br>
+          <input type="checkbox" id="shishKebab" name="snacks" value="Shish Kebab">
+          <label for="shishKebab">Shish Kebab</label><br>
+          <input type="checkbox" id="shishTawok" name="snacks" value="Shish Tawok">
+          <label for="shishTawok">Shish Tawok</label><br>
+          <input type="checkbox" id="otherSnacks" name="snacks" value="Other">
+          <label for="otherSnacks">Other (please specify below)</label>
+        </div>
+        <textarea id="otherSnackDetails" placeholder="Specify other snacks or quantities here (e.g., 50 Samosas, 30 Spring Rolls)" rows="3" style="margin-top: 10px;"></textarea>
+
+        <label for="deliveryAddress">Delivery Address:</label>
+        <textarea id="deliveryAddress" placeholder="Your full delivery address" rows="3" required></textarea>
+
+        <label for="preferredDate">Preferred Delivery Date:</label>
+        <input type="date" id="preferredDate" required>
+
+        <label for="preferredTime">Preferred Delivery Time:</label>
+        <input type="time" id="preferredTime" required>
+
+        <button type="submit">Send Order via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 FlourCraft E3. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const whatsappNumber = '2348094459168'; // Your WhatsApp number
+
+      // Get selected snacks
+      const selectedSnacks = Array.from(document.querySelectorAll('input[name="snacks"]:checked'))
+                                  .map(checkbox => checkbox.value);
+      let snackList = selectedSnacks.join(', ');
+      const otherSnackDetails = document.getElementById('otherSnackDetails').value.trim();
+      if (otherSnackDetails) {
+        if (snackList) {
+          snackList += `, Other: ${otherSnackDetails}`;
+        } else {
+          snackList = `Other: ${otherSnackDetails}`;
+        }
+      }
+
+      const deliveryAddress = document.getElementById('deliveryAddress').value;
+      const preferredDate = document.getElementById('preferredDate').value;
+      const preferredTime = document.getElementById('preferredTime').value;
+
+      // Construct the WhatsApp message
+      const message = `Hello FlourCraft E3, I'd like to place an order:%0A%0A` +
+                      `*Snacks:* ${snackList || 'No snacks selected'}.%0A` +
+                      `*Delivery Address:* ${deliveryAddress}%0A` +
+                      `*Preferred Date:* ${preferredDate}%0A` +
+                      `*Preferred Time:* ${preferredTime}%0A%0A` +
+                      `Looking forward to my delicious order!`;
+
+      // Encode the message for a URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // Create the WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
 </body>
 </html>
